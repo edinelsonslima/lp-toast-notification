@@ -18,6 +18,20 @@ type IChange = ChangeEvent<HTMLSelectElement> & {
 export default function App() {
   const [value, setValue] = useState('');
   const [position, setPosition] = useState<IPosition>('right-top');
+  const [duration, setDuration] = useState<Record<string, number>>({
+    ghost: 3_000,
+    info: 4_000,
+    success: 5_000,
+    warn: 6_000,
+    error: 7_000,
+  });
+
+  const handleChangeDuration = (toast: string) => {
+    return (e: ChangeEvent<HTMLInputElement>) => {
+      const value = Number(e?.target.value?.replace(/\D/, ''));
+      setDuration((prev) => ({ ...prev, [toast]: value }));
+    };
+  };
 
   return (
     <>
@@ -46,31 +60,95 @@ export default function App() {
 
       <h3 className='title'>Clique em um botão abaixo para o toast aparecer</h3>
       <div className='buttons'>
-        <button
-          onClick={() => toast.ghost({ text: value || 'Lorem Ipsum Dollor' })}
-        >
-          GHOST
-        </button>
-        <button
-          onClick={() => toast.info({ text: value || 'Lorem Ipsum Dollor' })}
-        >
-          INFORMATION
-        </button>
-        <button
-          onClick={() => toast.success({ text: value || 'Lorem Ipsum Dollor' })}
-        >
-          SUCCESS
-        </button>
-        <button
-          onClick={() => toast.warn({ text: value || 'Lorem Ipsum Dollor' })}
-        >
-          WARNING
-        </button>
-        <button
-          onClick={() => toast.error({ text: value || 'Lorem Ipsum Dollor' })}
-        >
-          ERROR
-        </button>
+        <div className='container-action'>
+          <input
+            type='number'
+            value={duration.ghost}
+            onChange={handleChangeDuration('ghost')}
+          />
+          <button
+            onClick={() =>
+              toast.ghost({
+                text: value || 'Lorem Ipsum Dolor',
+                duration: duration.ghost,
+              })
+            }
+          >
+            GHOST
+          </button>
+        </div>
+
+        <div className='container-action'>
+          <input
+            type='number'
+            value={duration.info}
+            onChange={handleChangeDuration('info')}
+          />
+          <button
+            onClick={() =>
+              toast.info({
+                text: value || 'Lorem Ipsum Dolor',
+                duration: duration.info,
+              })
+            }
+          >
+            INFORMATION
+          </button>
+        </div>
+
+        <div className='container-action'>
+          <input
+            type='number'
+            value={duration.success}
+            onChange={handleChangeDuration('success')}
+          />
+          <button
+            onClick={() =>
+              toast.success({
+                text: value || 'Lorem Ipsum Dolor',
+                duration: duration.success,
+              })
+            }
+          >
+            SUCCESS
+          </button>
+        </div>
+
+        <div className='container-action'>
+          <input
+            type='number'
+            value={duration.warn}
+            onChange={handleChangeDuration('warn')}
+          />
+          <button
+            onClick={() =>
+              toast.warn({
+                text: value || 'Lorem Ipsum Dolor',
+                duration: duration.warn,
+              })
+            }
+          >
+            WARNING
+          </button>
+        </div>
+
+        <div className='container-action'>
+          <input
+            type='number'
+            value={duration.error}
+            onChange={handleChangeDuration('error')}
+          />
+          <button
+            onClick={() =>
+              toast.error({
+                text: value || 'Lorem Ipsum Dolor',
+                duration: duration.error,
+              })
+            }
+          >
+            ERROR
+          </button>
+        </div>
       </div>
 
       <footer className='footer'>
