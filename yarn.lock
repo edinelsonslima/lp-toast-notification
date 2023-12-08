@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@edinelsonslima/toast-notification@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/@edinelsonslima/toast-notification/-/toast-notification-0.1.32.tgz#2199f9ae3dd72f0557b78318f6a087d3bbe0d171"
-  integrity sha512-gWrvaoZxJZs7KlnFJF+9jSwGqWXVzdJc1fgGasYKTztoOtHT34/P5LL0vqweKe8eijHYwk4q3pqbo2Kcr8TDiQ==
+"@edinelsonslima/toast-notification@^0.1.33":
+  version "0.1.33"
+  resolved "https://registry.yarnpkg.com/@edinelsonslima/toast-notification/-/toast-notification-0.1.33.tgz#d59789ab901976eabe82212afd955bf3043c0f43"
+  integrity sha512-q1jbCbZfJX/2BsQCFGQCtWscYLV4nhC9FsAz0QjoICQzzzBHVWU8pqhtIXqE1IfdN+CefVDjiHFGcEivA1qBFA==
 
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
