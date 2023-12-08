@@ -69,7 +69,7 @@ export default function App() {
           <button
             onClick={() =>
               toast.ghost({
-                text: value || 'Lorem Ipsum Dolor',
+                content: value || 'Lorem Ipsum Dolor',
                 duration: duration.ghost,
               })
             }
@@ -87,7 +87,7 @@ export default function App() {
           <button
             onClick={() =>
               toast.info({
-                text: value || 'Lorem Ipsum Dolor',
+                content: value || 'Lorem Ipsum Dolor',
                 duration: duration.info,
               })
             }
@@ -105,7 +105,7 @@ export default function App() {
           <button
             onClick={() =>
               toast.success({
-                text: value || 'Lorem Ipsum Dolor',
+                content: value || 'Lorem Ipsum Dolor',
                 duration: duration.success,
               })
             }
@@ -123,7 +123,7 @@ export default function App() {
           <button
             onClick={() =>
               toast.warn({
-                text: value || 'Lorem Ipsum Dolor',
+                content: value || 'Lorem Ipsum Dolor',
                 duration: duration.warn,
               })
             }
@@ -141,7 +141,7 @@ export default function App() {
           <button
             onClick={() =>
               toast.error({
-                text: value || 'Lorem Ipsum Dolor',
+                content: value || 'Lorem Ipsum Dolor',
                 duration: duration.error,
               })
             }
