@@ -2,22 +2,20 @@ import { ChangeEvent, useState } from 'react';
 import {
   toast,
   ToastContainer,
-  IToastContainerProps,
+  IPositions,
 } from '@edinelsonslima/toast-notification';
-import '@edinelsonslima/toast-notification/dist/style.css';
+import '@edinelsonslima/toast-notification/style.css';
 import './index.css';
-
-type IPosition = IToastContainerProps['position'];
 
 type IChange = ChangeEvent<HTMLSelectElement> & {
   target: {
-    value: IPosition;
+    value: IPositions;
   };
 };
 
 export default function App() {
   const [value, setValue] = useState('');
-  const [position, setPosition] = useState<IPosition>('right-top');
+  const [position, setPosition] = useState<IPositions>('right-top');
   const [duration, setDuration] = useState<Record<string, number>>({
     ghost: 3_000,
     info: 4_000,
